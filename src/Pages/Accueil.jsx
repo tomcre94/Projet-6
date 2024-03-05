@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 
-const Accueil = () => {
+export default function Accueil() {
   return (
     <Layout>
       <h1>Page d'accueil</h1>
@@ -9,5 +9,3 @@ const Accueil = () => {
     </Layout>
   );
 };
-
-export default Accueil;

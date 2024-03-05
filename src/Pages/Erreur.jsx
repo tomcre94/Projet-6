@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 
-const Erreur = () => {
+export default function Erreur() {
   return (
     <Layout>
       <h1>Erreur 404</h1>
@@ -9,5 +9,3 @@ const Erreur = () => {
     </Layout>
   );
 };
-
-export default Erreur;
