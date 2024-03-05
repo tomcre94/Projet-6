@@ -1,7 +1,7 @@
 // Accueil.js
 
 import React from "react";
-import Layout from "./layout.js";
+import Layout from "../layout.js";
 
 const Accueil = () => {
   return (
