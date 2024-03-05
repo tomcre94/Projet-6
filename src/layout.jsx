@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header"; // Votre composant d'en-tête
-import Footer from "./components/Footer"; // Votre composant de pied de page
+import Header from "./components/Header"; 
+import Footer from "./components/Footer"; 
 
 const Layout = ({ children }) => {
   return (
