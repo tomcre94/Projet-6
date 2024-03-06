@@ -1,13 +1,20 @@
 import React from "react";
-import Header from "./Header"; 
-import Footer from "./Footer"; 
 
 function Layout({ children }) {
   return (
     <div>
-      <Header />
+      <header>
+      <nav>
+        <p>intégrer logo ici</p>
+        <a href="/">Accueil</a>
+        <a href="/Apropos">A propos</a>
+      </nav>
+    </header>
       <main>{children}</main>
-      <Footer />
+      <footer>
+     <p>Intégrer logo ici</p>
+      © 2024 Kasa. All Rights reserved
+    </footer>
     </div>
   );
 }
