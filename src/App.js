@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.scss";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Accueil from "./Pages/Accueil";
 import APropos from "./Pages/Apropos";
