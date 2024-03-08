@@ -1,12 +1,14 @@
 import React from "react";
 import "./layout.scss"
 import { Link } from "react-router-dom";
+import logo from "../../ASSETS/logoheader.svg"
+import footerLogo from '../../ASSETS/logofooter.png';
 
 function Layout({ children }) {
   return (
     <div>
       <header>
-      <p>intégrer logo ici</p>
+      <img className='navbar-logo' src={logo} alt='logo Kasa' />      
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>
@@ -14,8 +16,8 @@ function Layout({ children }) {
     </header>
       <main>{children}</main>
       <footer>
-     <p>Intégrer logo ici</p>
-      © 2024 Kasa. All Rights reserved
+      <img src={footerLogo} alt='logo Kasa' />
+       © 2024 Kasa. All Rights reserved
     </footer>
     </div>
   );
