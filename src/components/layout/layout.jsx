@@ -1,5 +1,6 @@
 import React from "react";
 import "./layout.scss"
+import { Link } from "react-router-dom";
 
 function Layout({ children }) {
   return (
@@ -7,8 +8,8 @@ function Layout({ children }) {
       <header>
       <p>intégrer logo ici</p>
       <nav>
-        <a href="/">Accueil</a>
-        <a href="/Apropos">A propos</a>
+        <Link to="/">Accueil</Link>
+        <Link to="/about">A propos</Link>
       </nav>
     </header>
       <main>{children}</main>
