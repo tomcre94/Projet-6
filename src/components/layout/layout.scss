@@ -15,12 +15,11 @@ nav {
 
 footer {
     background-color: black; 
-    color: white; 
-    text-align: center;
+    color: white;
+    height: 209px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 209px; 
-   p {
-      margin: 10px 0;
-    }
   }
   
