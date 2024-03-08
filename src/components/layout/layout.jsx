@@ -1,11 +1,12 @@
 import React from "react";
+import "./layout.scss"
 
 function Layout({ children }) {
   return (
     <div>
       <header>
+      <p>intégrer logo ici</p>
       <nav>
-        <p>intégrer logo ici</p>
         <a href="/">Accueil</a>
         <a href="/Apropos">A propos</a>
       </nav>
