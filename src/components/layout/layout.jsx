@@ -17,7 +17,7 @@ function Layout({ children }) {
       <main>{children}</main>
       <footer>
       <img src={footerLogo} alt='logo Kasa' />
-       © 2024 Kasa. All Rights reserved
+       <p>© 2024 Kasa. All Rights reserved</p> 
     </footer>
     </div>
   );
