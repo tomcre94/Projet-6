@@ -2,6 +2,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 86%;
+  margin: 30px auto;
   p {
     margin-right: auto;
   }
@@ -11,6 +13,12 @@ nav {
   display: flex;
   margin-right: 15px;
   a { margin-left: 57px;}
+}
+
+main {
+  width: 86%;
+  margin: 0 auto;
+  align-items: center;
 }
 
 footer {

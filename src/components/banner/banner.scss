@@ -1,9 +1,11 @@
 .banner-container {
     position: relative;
-    margin: 30px 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
   
   .banner-img {
@@ -24,9 +26,7 @@
   }
   
   @media screen and (min-width: 768px) {
-    .banner-container {
-      margin: 40px 40px;
-    }
+   
     .banner-img {
       height: 220px;
     }

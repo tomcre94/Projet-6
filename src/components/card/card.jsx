@@ -5,14 +5,11 @@ function Card ({id, title, cover}) {
 
     return (
         //<Link to={`/Accomodation/${id}`} className='card'>
-      <figure className='card-figure'>
+      <figure className='card-figure' style={{ position: 'relative' }}>
         <img src={cover} alt={title} className='card-img'></img>
-        <figcaption className='card-linear-gradient'>
-          <p className='card-figcaption'>{title}</p>
-        </figcaption>
+        <p style={{ position: 'absolute', bottom: '10px', left: '25px', color: "white", padding: '10px', width: '50%'}}>{title}</p>
       </figure>
     //</Link> 
-
     )
 }
 

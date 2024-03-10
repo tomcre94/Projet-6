@@ -1,0 +1,24 @@
+.card-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    margin:0;
+  }
+  
+  .card-img {
+    width: 100%; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    overflow: hidden; 
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .card-img img {
+    width: 100%; /* Assurez-vous que l'image occupe toute la largeur de la carte */
+    height: auto; /* Ajustez la hauteur de manière proportionnelle */
+    display: block; /* Éliminez l'espace supplémentaire sous l'image en la rendant un élément de bloc */
+  }
+  
