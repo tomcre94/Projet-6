@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "./components/card/card";
+import Card from "./card/card";
 
 export default function JsonComponent() {
   const [jsonData, setJsonData] = useState([]);
