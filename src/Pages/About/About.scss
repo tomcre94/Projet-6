@@ -1,0 +1,42 @@
+@import url('https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_less%3A');
+@import url('https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_more%3A');
+
+.title-module {
+    color: white;
+    background-color: #FF6060;
+    width: 71%;
+    height: 52px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-weight:700;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+.title {
+    margin-left: 15px;
+    margin-top:10px;
+}
+.arrow {
+    margin-right: 15px;
+    margin-top:10px;
+}
+  .description-module {
+    color: black;
+    background-color:#F6F6F673;
+    width: 71%;
+    margin-top: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .collapse {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+    p {
+        padding: 15px;
+      }
+}
