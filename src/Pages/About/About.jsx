@@ -3,8 +3,6 @@ import Layout from "../../components/layout/layout";
 import "./About.scss";
 import Banner from "../../components/banner/banner";
 import Imgabout from "../../ASSETS/imgapropos.jpg"
-import VectorUp  from "../../ASSETS/Vectorvectorup.jpg"
-import VectorDown  from "../../ASSETS/Vectorvectordown.jpg"
 
 const Module = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +10,11 @@ const Module = ({ title, description }) => {
   return (
     <div className="collapse">
       <div onClick={() => setIsOpen(!isOpen)} className={"title-module"}>
-       <span className="title">{title}</span> <span className="arrow">{isOpen ? <span class="material-icons">
+       <span className="title">{title}</span> <span className="arrow">{isOpen ? <i class="material-symbols-outlined fa-lg">
 expand_more
-</span> : <span class="material-icons">
+</i> : <i class="material-symbols-outlined fa-lg">
 expand_less
-</span>}</span>
+</i>}</span>
       </div>
       {isOpen && <p className={"description-module"}>{description}</p>}
     </div>
