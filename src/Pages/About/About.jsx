@@ -4,6 +4,7 @@ import "./About.scss";
 import Banner from "../../components/banner/banner";
 import Imgabout from "../../ASSETS/imgapropos.jpg"
 
+
 const Module = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
 
