@@ -7,11 +7,9 @@ export default function JsonComponent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("logements.json");      
+        const response = await fetch("logements.json")
           const parsedData = await response.json();
-          setJsonData(parsedData);
-          console.log(parsedData);
-       
+          setJsonData(parsedData);     
       } catch (error) {
         console.error(
           "Une erreur s'est produite lors de la récupération des données JSON :",
