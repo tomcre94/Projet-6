@@ -3,6 +3,7 @@ import "./App.scss";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Accueil from "./Pages/Home/Accueil";
 import About from "./Pages/About/About.jsx";
+import Accomodation from "./Pages/Accomodations.jsx";
 import Erreur from "./Pages/Error/Erreur";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Accomodations/:id" element={<Accomodation />}></Route>
         <Route path="*" element={<Erreur />} />
       </Routes>
     </Router>
