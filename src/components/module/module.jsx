@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import "./module.scss"
+import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 
 const Module = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +9,8 @@ const Module = ({ title, description }) => {
     return (
       <div className="collapse">
         <div onClick={() => setIsOpen(!isOpen)} className={"title-module"}>
-         <span className="title">{title}</span> <span className="arrow">{isOpen ? <i class="material-symbols-outlined fa-lg">
-  expand_more
-  </i> : <i class="material-symbols-outlined fa-lg">
-  expand_less
-  </i>}</span>
+          <span className="title">{title}</span>
+          <span className="arrow">{isOpen ? <SlArrowUp /> : <SlArrowDown />}</span>
         </div>
         {isOpen && <p className={"description-module"}>{description}</p>}
       </div>
