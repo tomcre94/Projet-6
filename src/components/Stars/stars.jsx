@@ -1,5 +1,5 @@
-import star from '../../assets/star_rate.svg'
-import starVide from '../../assets/star_rate-vide.svg'
+import star from '../../ASSETS/star_rate.svg'
+import starVide from '../../ASSETS/star_rate-vide.svg'
 
 function Etoiles ({ etoiles }) {
   const etoilePleine = <img src={star} alt='star' />
@@ -12,4 +12,4 @@ function Etoiles ({ etoiles }) {
   )
 }
 
-export default Etoiles
+export default Etoiles;

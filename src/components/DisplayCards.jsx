@@ -1,4 +1,4 @@
-import { useAccomodations } from "./useAccomodations";
+import { useAccomodations } from "./fetchAccomodations";
 import Card from "./card/card";
 
 export default function JsonComponent() {

@@ -1,5 +1,5 @@
 import React from "react";
-import JsonComponent from "../../components/JsonComponent";
+import JsonComponent from "../../components/DisplayCards";
 import Layout from "../../components/layout/layout";
 import Banner from "../../components/banner/banner";
 import homeBanner from "../../ASSETS/imgbanner.jpg";
