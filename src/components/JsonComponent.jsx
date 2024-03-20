@@ -1,26 +1,11 @@
-import { useEffect, useState } from "react";
+import { useAccomodations } from "./useAccomodations";
 import Card from "./card/card";
 
 export default function JsonComponent() {
-  const [jsonData, setJsonData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("logements.json")
-          const parsedData = await response.json();
-          setJsonData(parsedData);     
-      } catch (error) {
-        console.error(
-          "Une erreur s'est produite lors de la récupération des données JSON :",
-          error
-        );
-      }
-    };
-
-    fetchData();
-  }, []);
-
+  const jsonData = useAccomodations();
+  if (!jsonData) {
+    return <p>Chargement en cours...</p>;
+  }
   return (
     <figure className='card-container'>
       {jsonData.length > 0 ? (

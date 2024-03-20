@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/layout";
+import ImageCarousel from "../components/Carousel/Carousel";
 
 const Accueil = () => {
  return (
@@ -15,7 +16,7 @@ const Accueil = () => {
 la notation du logement 
 tags
 deux modules (un avec la description et l'autre avec les équipements)
- {/* Autres éléments */}
+ <ImageCarousel />
  </Layout>
 );
 };
