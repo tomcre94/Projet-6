@@ -3,6 +3,7 @@ import Card from "./card/card";
 
 export default function JsonComponent() {
   const jsonData = useAccomodations();
+  console.log("jsonData1:", jsonData);
   if (!jsonData) {
     return <p>Chargement en cours...</p>;
   }

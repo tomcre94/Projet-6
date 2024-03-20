@@ -7,7 +7,6 @@ export function useAccomodations() {
     const fetchData = async () => {
       try {
         const response = await fetch("logements.json");
-        console.log("Response:", response);
         const parsedData = await response.json();
         console.log("Parsed Data:", parsedData);
         setJsonData(parsedData);
