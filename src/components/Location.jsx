@@ -1,38 +1,61 @@
 import { useParams } from "react-router-dom";
+import { useState } from 'react';
 import locationData from "../ASSETS/logements.json"
+import Etoiles from "./Stars/stars"
+import Module from "./module/module"
+import Tag from "./Tag/tag";
 
 export default function Location() {
+    const [currentIndex, setCurrentIndex] = useState(0);
     const idLocation = useParams();
     const location = locationData.find(location => location.id === idLocation.id);
-    console.log("locationtest", location);
     if (!location) {
         return <p>Location introuvable</p>;
     }
+    const imgList = location.pictures;
 
+    const goToNextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % imgList.length);
+    };
+
+    const goToPrevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + imgList.length) % imgList.length);
+    };
+    const img = imgList[currentIndex];
     return (
+        <div className="locationWrapper">
         <figure className="carousel">
             <div className="image-container">
-                <img id='imgLogement' src={location.cover} alt={location.title} />
+            <img src={img} alt={`Image ${currentIndex + 1}`}/>
             </div>
             <div className="controls">
-                <button>Précédent</button>
-                <button>Suivant</button>
+                <button onClick={goToPrevSlide}>Précédent</button>
+                <button onClick={goToNextSlide}>Suivant</button>
             </div>
-           {/*
-            <Etoiles key={`${logement?.rating}-${logement?.id}`} etoiles={location.rating} />
+        </figure>
+            <div className="infoLogement">
+                <h1 className="location-title"> {location.title} </h1>
+                <h2 className="location-location"> {location.location} </h2>
+               <section className='tags'>
+                  {location.tags.map((tag, index) => (
+                    <Tag key={`${tag}-${index}`} tag={tag} />
+                  ))}
+                </section>
+              </div>
+              <section className="infoLoueur">
+                <div className="nomImageLoueur">
+                  <h3> {location.host.name} </h3>
+                  <img src={location.host.picture} alt={location.host.name} />
+                </div>
+                <Etoiles key={`${location.rating}-${location.id}`} etoiles={location.rating} />
+              </section>
             <div className="modules">
-            <Module key={`${'description'}-${logement?.id}`} title={Description} description={location.description} />
-            <Module key={`${'equipements'}-${logement?.id}`} title={Equipements} description={location.equipements} />
+            <Module key={"description" + location.id} title={"Description"} description={location.description} />
+            <Module key={"equipements" + location.id} title={"Equipements"} description={location.equipments} />
             </div>
-           
-           */}
-
-
-            
- le titre du logement
- le lieu du logement 
+                       
  le nom du propriétaire
 tags
-        </figure>
+</div>   
     );
 }
