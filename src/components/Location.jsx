@@ -4,6 +4,7 @@ import locationData from "../ASSETS/logements.json"
 import Etoiles from "./Stars/stars"
 import Module from "./module/module"
 import Tag from "./Tag/tag";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 export default function Location() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,24 +14,28 @@ export default function Location() {
         return <p>Location introuvable</p>;
     }
     const imgList = location.pictures;
+    const totalImg = imgList.length;
 
     const goToNextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % imgList.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImg);
     };
 
     const goToPrevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + imgList.length) % imgList.length);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImg) % totalImg);
     };
     const img = imgList[currentIndex];
     return (
         <div className="locationWrapper">
-        <figure className="carousel">
+         <figure className="carousel">
             <div className="image-container">
-            <img src={img} alt={`Image ${currentIndex + 1}`}/>
-            </div>
-            <div className="controls">
-                <button onClick={goToPrevSlide}>Précédent</button>
-                <button onClick={goToNextSlide}>Suivant</button>
+              <img src={img} alt={`Image ${currentIndex + 1}`}/>
+              <div className="controls">
+                  <button onClick={goToPrevSlide}><SlArrowLeft /></button>
+                  <button onClick={goToNextSlide}><SlArrowRight /></button>
+              </div>
+              <div className="image-count">
+                        {currentIndex + 1}/{totalImg}
+              </div>
             </div>
         </figure>
             <div className="infoLogement">

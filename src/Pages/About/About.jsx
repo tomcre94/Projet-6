@@ -10,9 +10,11 @@ const About = () => {
   return (
     <Layout>
       <Banner imageSrc={Imgabout} imageAlt="Falaise au-dessus de l'océan" text="" />
+      <div className="ModulesAbout">
       {aboutList.map((module, index) => (
         <Module key={index} title={module.title} description={module.content} />
       ))}
+      </div>
     </Layout>
   );
 };

@@ -24,19 +24,21 @@
   .description-module {
     color: black;
     background-color:#F6F6F673;
-    width: 71%;
     margin-top: 0;
     border-radius: 5px;
     box-sizing: border-box;
   }
-
+  .ModulesAbout{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;    
+  
   .collapse {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
     margin-top: 20px;
-    p {
-        padding: 15px;
-      }
-}
+    width: 81%;
+}}
