@@ -44,7 +44,10 @@ export default function Location() {
               </div>
               <section className="infoLoueur">
                 <div className="nomImageLoueur">
-                  <h3> {location.host.name} </h3>
+                  <div className="loueurName">
+                  <h3> {location.host.name.split(' ')[0]} </h3> {/* Prénom */}
+                  <h3> {location.host.name.split(' ')[1]} </h3> {/* Nom */}
+                  </div>
                   <img src={location.host.picture} alt={location.host.name} />
                 </div>
                 <Etoiles key={`${location.rating}-${location.id}`} etoiles={location.rating} />
@@ -53,9 +56,6 @@ export default function Location() {
             <Module key={"description" + location.id} title={"Description"} description={location.description} />
             <Module key={"equipements" + location.id} title={"Equipements"} description={location.equipments} />
             </div>
-                       
- le nom du propriétaire
-tags
-</div>   
+          </div>   
     );
 }
