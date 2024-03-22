@@ -6,19 +6,29 @@
     grid-template-columns: repeat(3, 1fr); 
     margin:0;
   }
-  
+  // diminuer la KASA header taille du logo
   .card-img {
     width: 100%; 
     border: 1px solid #ddd; 
     border-radius: 8px; 
     overflow: hidden; 
-  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   .card-img img {
-    width: 100%; /* Assurez-vous que l'image occupe toute la largeur de la carte */
-    height: auto; /* Ajustez la hauteur de manière proportionnelle */
-    display: block; /* Éliminez l'espace supplémentaire sous l'image en la rendant un élément de bloc */
+    width: 100%; 
+    height: 100%; 
+    display: block; 
   }
   
+  @media (max-width: 400px) {
+    header nav a{font-size: 12px; font-weight: 500; margin-left: 10px;margin-right: 10px; text-transform: uppercase;}
+    main {width: 100%;}
+    .banner-container {margin:0; img {margin:20px}}
+    .card-figure {padding:20px; padding-top: 0; img{height:255px} p{font-size: 18px; font-weight: 700;}}
+    .card-container{
+      grid-template-columns: 1fr;
+    }
+    .banner-text{padding: 0; font-size: 24px; font-weight: 700;}
+    .navbar-logo{ width: 126px;}
+  }

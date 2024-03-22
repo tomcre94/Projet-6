@@ -29,3 +29,9 @@ margin-bottom: 130px;
     margin-bottom: 130px;
     color:black;
 }
+
+@media (max-width: 400px) {
+    .errorH1{ font-size: 96px; }
+    .ErrorMsg{ font-size: 18px;line-height: 26px;}
+    .ReturnHome{font-size: 14px;}
+}

@@ -42,3 +42,10 @@
     margin-top: 20px;
     width: 81%;
 }}
+
+@media (max-width: 400px) {
+  .ModulesAbout .collapse{ 
+    width: 90%; height: 30px; margin-bottom: 0;
+    .title{font-size: 13px; font-weight: 700;} 
+    .arrow{width: 16px; height:9px; margin-bottom: 20px; margin-right: 25px;}}
+}

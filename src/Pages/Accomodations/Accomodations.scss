@@ -1,10 +1,11 @@
 /*
-boutons placés à droite et gauche et il faut que ça soit des icons
-dans le fichier jsx, ajouter le nombre de pages en bas de l'img gallery
 
-textes header layout (css)
+Passer au scss !!??
+inverser les fleches des modules 
 
-modif type icon star + taille 
+le footer doit rester tout en bas !
+
+mettre en place les versions mobiles (taille des éléments, disposition des éléments (page Accueil + logement) ; height du footer
 */
 
 .carousel {
@@ -60,6 +61,7 @@ modif type icon star + taille
     width: 70%; 
     order: 1;
     margin:0;
+    margin-top: 15px;
     .location-title {
         font-family: Montserrat;
         font-weight:500;
@@ -104,6 +106,7 @@ modif type icon star + taille
     order: 2;
     width: 30%;
     margin:0;
+    margin-top: 15px;
     .nomImageLoueur{
         display: flex;
         flex-direction: row;
