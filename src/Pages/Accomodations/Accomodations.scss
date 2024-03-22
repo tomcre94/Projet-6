@@ -1,31 +1,35 @@
 /*
+Mettre un fetch à la place du data ? 
+découper le composant Location
+enlever les console.log dans la console
 
-Passer au scss !!??
-inverser les fleches des modules 
-
-Dans la page a propos, le footer doit rester tout en bas !
-
-mettre en place les versions mobiles (taille des éléments, disposition des éléments (page Accueil + logement) ; height du footer
+Sass : 
+trouver les répétitions et les regrouper 
+(faire une logique de V par exemple une classe button, puis des ss classes button-orange (pour rajouter ou modif la couleur)); 
+on ajoute alors plusieurs classes entre elles
+créer des variables (/ex les couleurs) et les réutiliser
 */
 
 .carousel {
     position: relative;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin:0;
-    .image-container{
+    margin: 0;
+
+    .image-container {
         width: 100%;
-    }
-    img{
-    width: 100%;
-    height: 415px;
-    border-radius: 25px;
-    object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 415px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
     }
 }
+
 .controls {
     position: absolute;
     top: 50%;
@@ -33,6 +37,7 @@ mettre en place les versions mobiles (taille des éléments, disposition des él
     display: flex;
     justify-content: space-between;
     width: 100%;
+
     button {
         background: transparent;
         border: none;
@@ -46,7 +51,7 @@ mettre en place les versions mobiles (taille des éléments, disposition des él
 
 .image-count {
     position: absolute;
-    bottom: 25px; 
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -55,77 +60,83 @@ mettre en place les versions mobiles (taille des éléments, disposition des él
 
 .infoLogement {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items:flex-start;
-    width: 70%; 
+    align-items: flex-start;
+    width: 70%;
     order: 1;
-    margin:0;
+    margin: 0;
     margin-top: 15px;
+
     .location-title {
         font-family: Montserrat;
-        font-weight:500;
+        font-weight: 500;
         font-size: 36px;
         line-height: 51px;
         text-align: left;
-        margin:0;
+        margin: 0;
     }
-    
+
     .location-location {
         font-family: Montserrat;
         font-size: 18px;
         font-weight: 500;
-        margin:0;
+        margin: 0;
     }
+
     .tags {
-        display: flex; 
-        align-items: center;
-    .tag {
-        margin-right: 10px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 140px;
-        height: 25px;
-        border-radius: 10px;
-        background-color: #FF6060;
-        color: white;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        white-space: nowrap;
-      }
-    }      
+
+        .tag {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 25px;
+            border-radius: 10px;
+            background-color: #FF6060;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            white-space: nowrap;
+        }
+    }
 }
 
 .infoLoueur {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items:flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
     order: 2;
     width: 30%;
-    margin:0;
+    margin: 0;
     margin-top: 15px;
-    .nomImageLoueur{
+
+    .nomImageLoueur {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap:10px;
+        gap: 10px;
+
         h3 {
             display: flex;
             flex-direction: column;
-            margin:0;
-            color:#FF6060;
+            margin: 0;
+            color: #FF6060;
             font-size: 18px;
             font-weight: 500;
-            font-family: Monserrat;
+            font-family: Montserrat;
         }
-        img{
+
+        img {
             border-radius: 75px;
             width: 64px;
-        } 
-        .loueurName{
+        }
+
+        .loueurName {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -135,56 +146,132 @@ mettre en place les versions mobiles (taille des éléments, disposition des él
 
 .modules {
     display: flex;
-    flex-direction: row; /* Direction des éléments en ligne */
     gap: 70px;
-    order:3;
+    order: 3;
     width: 100%;
 }
+
 .collapse {
     width: 50%;
     margin-bottom: 20px;
-.title-module {
-align-items: center;
-width: 100%;
-svg{width:28px; height:28px;}
-span {font-family: Montserrat;
-font-weight: 700;
-font-size: 18px; 
-margin-top: 0;}
-}
-.description-module{ 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-}
-    p{
-        margin:15px;
-        padding: 0;
+
+    .title-module {
+        align-items: center;
+        width: 100%;
+
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        span {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 0;
+        }
     }
-    .equipments { margin: 15px;
-        p{margin:0;
-        padding: 0;}}
+
+    .description-module,
+    .equipments {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+
+        p {
+            margin: 15px;
+            padding: 0;
+        }
+    }
 }
 
 .locationWrapper {
     display: flex;
     flex-wrap: wrap;
-  }  
- 
-  @media (max-width: 400px) {
-.locationWrapper{
+}
 
-    width: 90%; margin-left: 15px; 
-    .carousel { 
-    .image-container { 
-        .controls button,svg {
-            font-size: 24px;
+@media (max-width: 400px) {
+    .locationWrapper {
+        width: 90%;
+        margin-left: 15px;
+
+        .carousel {
+            .image-container {
+                img {
+                    height: 255px;
+                }
+            }
         }
-        img {height: 255px;}
-    }
-    
+
+        .infoLogement {
+            width: 100%;
+            margin: 0;
+
+            .location-title {
+                font-size: 18px;
+            }
+
+            .location-location {
+                font-size: 14px;
+            }
+
+            .tags {
+                flex-wrap: wrap;
+
+                .tag {
+                    font-size: 10px;
+                    width: 84px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .infoLoueur {
+            margin: 10px;
+            width: 100%;
+            flex-direction: row;
+
+            .loueurName {
+                h3 {
+                    font-size: 12px;
+                }
+            }
+
+            .nomImageLoueur {
+                order: 2;
+                img {
+                    width: 32px;
+                }
+            }
+
+            span img {
+                width: 18px;
+            }
+        }
+
+        .modules {
+            gap: 0;
+            flex-direction: column;
+
+            .collapse {
+                margin: 10px 0;
+                width: 100%;
+
+                .title-module {
+                    height: 30px;
+
+                    .title {
+                        font-size: 13px;
+                    }
+
+                    .arrow svg {
+                        width: 16px;
+                    }
+                }
+            }
+        }
     }
 }
-  }
+
   

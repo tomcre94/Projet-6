@@ -29,13 +29,15 @@ export default function Location() {
          <figure className="carousel">
             <div className="image-container">
               <img src={img} alt={`Image ${currentIndex + 1}`}/>
+              {totalImg > 1 && (
               <div className="controls">
                   <button onClick={goToPrevSlide}><SlArrowLeft /></button>
                   <button onClick={goToNextSlide}><SlArrowRight /></button>
-              </div>
+              </div>)}
+              {totalImg > 1 && (
               <div className="image-count">
                         {currentIndex + 1}/{totalImg}
-              </div>
+              </div> )}
             </div>
         </figure>
             <div className="infoLogement">
@@ -50,8 +52,8 @@ export default function Location() {
               <section className="infoLoueur">
                 <div className="nomImageLoueur">
                   <div className="loueurName">
-                  <h3> {location.host.name.split(' ')[0]} </h3> {/* Prénom */}
-                  <h3> {location.host.name.split(' ')[1]} </h3> {/* Nom */}
+                  <h3> {location.host.name.split(' ')[0]} </h3> 
+                  <h3> {location.host.name.split(' ')[1]} </h3>
                   </div>
                   <img src={location.host.picture} alt={location.host.name} />
                 </div>

@@ -40,3 +40,7 @@
         padding: 15px;
       }
 }
+
+@media (max-width: 400px) {
+  .description-module p{font-size: 10px;}
+}

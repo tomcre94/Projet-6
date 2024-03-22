@@ -10,7 +10,7 @@ const Module = ({ title, description }) => {
       <div className="collapse">
           <div onClick={() => setIsOpen(!isOpen)} className={"title-module"}>
               <span className="title">{title}</span>
-              <span className="arrow">{isOpen ? <SlArrowUp /> : <SlArrowDown />}</span>
+              <span className="arrow">{isOpen ? <SlArrowDown /> : <SlArrowUp />}</span>
           </div>
           {isOpen && (
               <div className="description-module">
