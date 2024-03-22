@@ -3,7 +3,7 @@
 Passer au scss !!??
 inverser les fleches des modules 
 
-le footer doit rester tout en bas !
+Dans la page a propos, le footer doit rester tout en bas !
 
 mettre en place les versions mobiles (taille des éléments, disposition des éléments (page Accueil + logement) ; height du footer
 */
@@ -171,17 +171,20 @@ margin-top: 0;}
     display: flex;
     flex-wrap: wrap;
   }  
-  
-  @media (max-width: 768px) {
-    .carousel,
-    .infoLogement,
-    .infoLoueur {
-      width: 100%; /* Sur les écrans plus petits, occupe toute la largeur */
+ 
+  @media (max-width: 400px) {
+.locationWrapper{
+
+    width: 90%; margin-left: 15px; 
+    .carousel { 
+    .image-container { 
+        .controls button,svg {
+            font-size: 24px;
+        }
+        img {height: 255px;}
     }
-  
-    .infoLogement,
-    .infoLoueur {
-      order: 2; /* Change l'ordre pour les petits écrans */
+    
     }
+}
   }
   
