@@ -1,12 +1,11 @@
 import React from "react";
-import Layout from "../../components/layout/layout";
-import Location from "../../components/Location";
+import {Layout, DescriptionAccomodations} from "../../components";
 import "./Accomodations.scss"
 
 const Accueil = () => {
  return (
  <Layout>
-     <Location />
+     <DescriptionAccomodations />
  </Layout>
 );
 };

@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
-import locationData from "../ASSETS/logements.json"
-import Etoiles from "./Stars/stars"
-import Module from "./module/module"
-import Tag from "./Tag/tag";
+import { useState } from "react";
+import locationData from "../../ASSETS/logements.json"
+import Etoiles from "../Stars/stars"
+import Module from "../module/module"
+import Tag from "../Tag/tag";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-export default function Location() {
+export function DescriptionAccomodations() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const idLocation = useParams();
     const location = locationData.find(location => location.id === idLocation.id);

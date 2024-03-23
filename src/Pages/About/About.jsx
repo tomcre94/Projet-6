@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/layout/layout";
+import {Layout} from "../../components";
 import "./About.scss";
 import Banner from "../../components/banner/banner";
 import Imgabout from "../../ASSETS/imgapropos.jpg"

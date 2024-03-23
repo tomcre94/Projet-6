@@ -1,7 +1,7 @@
-import { useAccomodations } from "./fetchAccomodations";
-import Card from "./card/card";
+import { useAccomodations } from "../../hooks/useAccomodations"
+import Card from "../card/card";
 
-export default function JsonComponent() {
+export function DisplayCards() {
   const jsonData = useAccomodations();
   if (!jsonData) {
     return <p>Chargement en cours...</p>;

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./layout.scss";
-import logo from "../../ASSETS/logoheader.svg";
 import footerLogo from "../../ASSETS/logofooter.png";
+import logo from "../../ASSETS/logoheader.svg";
+import "./layout.scss";
 
-function Layout({ children }) {
+export function Layout({ children }) {
   const location = useLocation();
   const [activePage, setActivePage] = useState("");
 
@@ -50,5 +50,3 @@ function Layout({ children }) {
     </div>
   );
 }
-
-export default Layout;
