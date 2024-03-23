@@ -8,9 +8,7 @@ export function useAccomodations() {
       try {
         const response = await fetch("logements.json");
         const parsedData = await response.json();
-        console.log("Parsed Data:", parsedData);
         setJsonData(parsedData);
-        console.log("jsonData", jsonData);
       } catch (error) {
         console.error(
           "Une erreur s'est produite lors de la récupération des données JSON :",

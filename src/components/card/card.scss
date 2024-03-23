@@ -4,6 +4,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    position: relative;
     .card-img {
       border: 1px solid #ddd; 
       border-radius: 8px; 
@@ -15,6 +16,12 @@
       height: 327px;
       display: block; 
     }
+    p{position: absolute; 
+      bottom: 10px; 
+      left: 25px; 
+      color: white; 
+      padding: 10px; 
+      width: 50%;}
   }
     
   .card-info {
