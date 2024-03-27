@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .carousel {
     position: relative;
     display: flex;
@@ -30,7 +32,7 @@
         border: none;
         cursor: pointer;
         font-size: 64px;
-        color:"$text-color";
+        color:$text-color;
         padding: 0;
         margin: 0;
     }
@@ -41,7 +43,7 @@
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: "$text-color";
+    color: $text-color;
     font-size: 18px;
 }
 
@@ -82,8 +84,8 @@
             width: 140px;
             height: 25px;
             border-radius: 10px;
-            background-color: "$backgd-color";
-            color: "$text-color";
+            background-color: $backgd-color;
+            color: $text-color;
             font-weight: 700;
             font-size: 14px;
             line-height: 19px;
@@ -112,7 +114,7 @@
             display: flex;
             flex-direction: column;
             margin: 0;
-            color: "$backgd-color";
+            color: $backgd-color;
             font-size: 18px;
             font-weight: 500;
             font-family: Montserrat;
