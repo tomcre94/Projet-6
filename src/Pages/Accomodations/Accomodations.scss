@@ -30,7 +30,7 @@
         border: none;
         cursor: pointer;
         font-size: 64px;
-        color: white;
+        color:"$text-color";
         padding: 0;
         margin: 0;
     }
@@ -41,7 +41,7 @@
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: "$text-color";
     font-size: 18px;
 }
 
@@ -82,8 +82,8 @@
             width: 140px;
             height: 25px;
             border-radius: 10px;
-            background-color: #FF6060;
-            color: white;
+            background-color: "$backgd-color";
+            color: "$text-color";
             font-weight: 700;
             font-size: 14px;
             line-height: 19px;
@@ -112,7 +112,7 @@
             display: flex;
             flex-direction: column;
             margin: 0;
-            color: #FF6060;
+            color: "$backgd-color";
             font-size: 18px;
             font-weight: 500;
             font-family: Montserrat;
@@ -131,12 +131,34 @@
     }
 }
 
+main.description-open {
+    min-height: 1200px;
+  }
+
 .modules {
+    position: relative;
     display: flex;
     gap: 70px;
     order: 3;
     width: 100%;
+    margin-bottom: 130px;
+    &.open {
+        margin-bottom: 500px;}
 }
+
+.modules > :nth-child(1) {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 45%;
+  }
+  
+  .modules > :nth-child(2) {
+    position: absolute;
+        top: 0; 
+        right: 0;
+        width: 45%s;
+  }
 
 .collapse {
     width: 50%;
@@ -176,12 +198,14 @@
 .locationWrapper {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 130px;
 }
 
 @media (max-width: 400px) {
     .locationWrapper {
         width: 90%;
         margin-left: 15px;
+        margin-bottom: 0;
 
         .carousel {
             .image-container {
@@ -236,10 +260,11 @@
                 width: 18px;
             }
         }
-
+        
         .modules {
             gap: 0;
             flex-direction: column;
+            margin-bottom: 0;
 
             .collapse {
                 margin: 10px 0;
@@ -258,7 +283,18 @@
                 }
             }
         }
+        .modules > :nth-child(1) {
+            position:relative;
+          }
+          
+          .modules > :nth-child(2) {
+            position:relative;
+          }
+          
     }
+    main.description-open {
+        min-height: 0;
+      }
 }
 
   

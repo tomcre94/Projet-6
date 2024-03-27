@@ -35,7 +35,7 @@ main {
 
 footer {
   background-color: black; 
-  color: white;
+  color: '$text-color';
   height: 209px;  
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@ footer {
     width: 120px;
     margin-top: 30px;
     font-size: small;
-    color: white;
+    color: '$text-color';
     text-align: center;
   }
 

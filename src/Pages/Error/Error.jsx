@@ -1,9 +1,10 @@
+import "../../App.scss"
 import React from "react";
 import {Layout} from "../../components";
-import "./Erreur.scss"
+import "./Error.scss"
 import { Link } from "react-router-dom";
 
-export default function Erreur() {
+export default function Error() {
   return (
     <Layout>
       <h1 className="errorH1">404</h1>

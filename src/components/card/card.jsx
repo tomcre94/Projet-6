@@ -1,7 +1,7 @@
 import "./card.scss";
 import { Link } from 'react-router-dom';
 
-function Card ({id, title, cover}) {
+function Card ({id, title, cover, accommodationData}) {
 
     return (
       <Link to={`/Accomodations/${id}`} className='card'>

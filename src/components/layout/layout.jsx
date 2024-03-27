@@ -8,13 +8,11 @@ export function Layout({ children }) {
   const location = useLocation();
   const [activePage, setActivePage] = useState("");
 
-  // Mettre à jour la page active à chaque changement d'URL
   useEffect(() => {
-    // Fonction pour définir la page active en fonction de l'URL courante
     const setActivePageByUrl = () => {
       const pathname = location.pathname;
       if (pathname === "/") {
-        setActivePage("Accueil");
+        setActivePage("Home");
       } else if (pathname === "/about") {
         setActivePage("A propos");
       }
@@ -30,7 +28,7 @@ export function Layout({ children }) {
         <nav>
           <Link
             to="/"
-            className={activePage === "Accueil" ? "active" : ""}
+            className={activePage === "Home" ? "active" : ""}
           >
             Accueil
           </Link>
