@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useAccomodations() {
   const [jsonData, setJsonData] = useState([]);
@@ -6,7 +6,7 @@ export function useAccomodations() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("logements.json");
+        const response = await fetch('/logements.json');
         const parsedData = await response.json();
         setJsonData(parsedData);
       } catch (error) {
@@ -18,6 +18,6 @@ export function useAccomodations() {
     };
     fetchData();
   }, []);
-  
+
   return jsonData;
 }
