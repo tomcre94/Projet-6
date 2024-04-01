@@ -9,6 +9,7 @@ import Module from "../../components/module/module"
 import Tag from "../../components/Tag/tag";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useAccomodations } from "../../hooks/useAccomodations"
+import Error from "../Error/Error";
 
 const Accomodations = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,8 +17,8 @@ const Accomodations = () => {
     const locationData = useAccomodations();
     const location = locationData.find(location => location.id === idLocation.id);
     if (!location) {
-        return <p>Location introuvable</p>;
-    }
+      return <Error />;
+        }
     const imgList = location.pictures;
     const totalImg = imgList.length;
 
