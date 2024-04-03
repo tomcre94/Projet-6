@@ -45,10 +45,10 @@
 }
 
 @media (max-width: 400px) {
-  main {min-height: 430px;}
+  main {min-height: 65vh;}
   .ModulesAbout .collapse{ 
     width: 90%; height: 30px; 
-    margin-bottom: 0;
+    margin-bottom: 20px;
     .title{font-size: 13px; font-weight: 700;} 
     .arrow{width: 16px; height:9px; margin-bottom: 20px; margin-right: 25px;}
     .open{margin-bottom: 50px;}

@@ -134,7 +134,7 @@
 }
 
 main.description-open {
-    min-height: 1200px;
+    min-height: 140vh;
   }
 
 .modules {
@@ -189,11 +189,7 @@ main.description-open {
         display: flex;
         flex-direction: column;
         margin-bottom: 1em;
-
-        p {
-            margin: 15px;
-            padding: 0;
-        }
+        ul {list-style-type: none;}
     }
 }
 
