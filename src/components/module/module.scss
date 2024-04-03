@@ -22,7 +22,17 @@
     margin-top:10px;
     svg {width: 32px;
       height: 32px; }
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: rotate(0deg);
+      }
+    
+      &.closed {
+        transform: rotate(180deg);
+      }
 }
+
   .description-module {
     color: black;
     background-color:#F6F6F673;
@@ -31,6 +41,13 @@
     border-radius: 5px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+  
+    &.open {
+      max-height: 1000px;
+    }
   }
 
   .collapse {
